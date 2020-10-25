@@ -1,0 +1,29 @@
+<mat-list>
+  <div mat-subheader>Add new comment</div>
+  <mat-list-item>
+    <csm-comment-form-container></csm-comment-form-container>
+  </mat-list-item>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <div mat-subheader>Comments</div>
+  <div class="comments">
+    <csm-spinner [class.top]="(commentsList$ | async)?.length > 2" *ngIf="showSpinner$ | async"></csm-spinner>
+
+    <mat-list-item class="comments__item"
+                   *ngFor="let comment of commentsList$ | async; trackBy: trackByCommentId"
+                   (click)="onCommentClick(comment)">
+      <csm-comments-list-item [comment]="comment" [types]="typesList$ | async"></csm-comments-list-item>
+    </mat-list-item>
+
+    <div *ngIf="(commentsList$ | async)?.length === 0">
+      <mat-list-item>
+        <mat-card  class="comments__empty">
+          <mat-card-content>
+            No comments currently! You can add new one.
+          </mat-card-content>
+        </mat-card>
+      </mat-list-item>
+    </div>
+  </div>
+</mat-list>

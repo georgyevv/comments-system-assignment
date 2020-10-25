@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'comments-system-root',
+  selector: 'csm-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Comments System');
+  }
 }

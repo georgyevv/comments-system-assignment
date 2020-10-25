@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+}
+
+.comment {
+  width: 100%;
+}
+
+.created-on {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.created-on__icon {
+  margin-right: 10px;
+}

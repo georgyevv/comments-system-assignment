@@ -1,0 +1,26 @@
+:host(.top) {
+  .spinner {
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 200px;
+  }
+}
+
+.spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  top: 0px;
+  left: 0px;
+}
+.spinner__element {
+  width: 50px;
+  height: 50px;
+  z-index: 22;
+}

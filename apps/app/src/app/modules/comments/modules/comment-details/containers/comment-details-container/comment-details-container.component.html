@@ -1,0 +1,11 @@
+<div class="container">
+  <csm-spinner *ngIf="showSpinner$ | async; else detailsForm"></csm-spinner>
+
+  <ng-template #detailsForm>
+    <csm-comment-details [comment]="comment$ | async" [types]="typesList$ | async"
+                         (edit)="onEdit($event)"
+                         (delete)="onDelete($event)"
+                         (back)="onBack()">
+    </csm-comment-details>
+  </ng-template>
+</div>

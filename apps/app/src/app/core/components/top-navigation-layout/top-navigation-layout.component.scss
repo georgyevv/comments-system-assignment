@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-logo {
+  cursor: pointer;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto 20px auto;
+  flex-grow: 1;
+}

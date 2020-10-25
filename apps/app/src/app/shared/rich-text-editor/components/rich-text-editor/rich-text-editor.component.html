@@ -1,0 +1,5 @@
+<div *ngIf="control">
+  <mat-label class="label">{{ label }}</mat-label>
+
+  <quill-editor [styles]="{ minHeight: '100px' }" [formControl]="control" (onContentChanged)="onContentChanged()"></quill-editor>
+</div>

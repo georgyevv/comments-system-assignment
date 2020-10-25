@@ -1,0 +1,28 @@
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+.additional-info__highlight {
+  font-weight: bold;
+}
+
+.type {
+  font-size: 16px;
+}
+.type__label {
+  display: inline-block;
+  margin-right: 10px;
+}
+.type__text {
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+<mat-card>
+  <csm-spinner *ngIf="showSpinner$ | async"></csm-spinner>
+
+  <mat-card-header *ngIf="id">
+    <mat-card-title>Edit Comment</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <csm-comment-form [comment]="comment$ | async" [typesList]="typesList$ | async" #form></csm-comment-form>
+  </mat-card-content>
+
+  <mat-card-actions class="actions">
+    <button mat-raised-button *ngIf="!id" color="primary" (click)="onCreateComment(form)">Add</button>
+
+    <button mat-raised-button *ngIf="id" (click)="onCancel()">Cancel</button>
+    <button mat-raised-button *ngIf="id" color="primary" (click)="onUpdateComment(form)">Update</button>
+  </mat-card-actions>
+</mat-card>

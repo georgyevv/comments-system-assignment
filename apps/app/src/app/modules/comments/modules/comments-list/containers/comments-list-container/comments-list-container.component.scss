@@ -1,0 +1,34 @@
+.divider {
+  margin: 40px 0px;
+}
+
+.comments {
+  position: relative;
+}
+.comments__item {
+  cursor: pointer;
+  margin-bottom: 40px;
+  animation-duration: 300ms;
+  animation-name: slidein;
+}
+.comments__empty {
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+// Material overrides
+:host ::ng-deep .mat-list-item {
+  height: auto !important;
+}
